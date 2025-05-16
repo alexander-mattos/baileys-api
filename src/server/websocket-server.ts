@@ -10,6 +10,7 @@ interface SocketData {
 export class SocketServer {
 	private io: SocketIOServer;
 	private clients: Map<string, Set<string>> = new Map();
+	close: any;
 
 	constructor(httpServer: http.Server) {
 		this.io = new SocketIOServer(httpServer, {
