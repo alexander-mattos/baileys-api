@@ -15,13 +15,6 @@ export const prisma = global.prismaClient || new PrismaClient({
             url: process.env.DATABASE_URL,
         },
     },
-    // Configurações do pool de conexões
-    connection: {
-        pool: {
-            // Diminuir número de conexões no pool
-            max: 5
-        }
-    }
 });
 
 // Salvar a instância no escopo global em desenvolvimento
